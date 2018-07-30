@@ -70,3 +70,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 set nocompatible
 filetype plugin on
 syntax on
+
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+
+let g:prettier#config#semi = 'false'
+
+let g:ctrlp_custom_ignore = 'node_modules\|git'

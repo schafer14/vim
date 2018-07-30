@@ -28,6 +28,8 @@ Plugin 'plasticboy/vim-markdown'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+let mapleader = ","
+
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsForwardTrigger="<c-j>"
 let g:UltiSnipsBackwardTrigger="<c-k>"
@@ -54,8 +56,8 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-map , <C-w>
-tmap , <C-w>
+map <leader> <C-w>
+tmap <leader> <C-w>
 tmap jk <C-\><C-N>
 tmap gt <C-\><C-N>gt
 
@@ -78,3 +80,4 @@ autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,
 let g:prettier#config#semi = 'false'
 
 let g:ctrlp_custom_ignore = 'node_modules\|git'
+

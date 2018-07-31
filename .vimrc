@@ -28,7 +28,6 @@ Plugin 'wikitopian/hardmode'
 Plugin 'tpope/vim-surround'
 Plugin 'luochen1990/rainbow'
 
-
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -57,17 +56,17 @@ set visualbell
 
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
-map <leader> <C-w>
-tmap <leader> <C-w>
+map <leader>w <C-w>
+tmap <leader>w <C-w>
 tmap jk <C-\><C-N>
 tmap gt <C-\><C-N>gt
 
 set clipboard=unnamedplus
-autocmd vimenter * NERDTree
 
 colorscheme gruvbox
 set background=dark
 
+map <leader>nt :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 set nocompatible

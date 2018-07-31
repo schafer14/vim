@@ -24,6 +24,10 @@ Plugin 'prettier/vim-prettier'
 Plugin 'vimwiki/vimwiki'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'wikitopian/hardmode'
+Plugin 'tpope/vim-surround'
+Plugin 'luochen1990/rainbow'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,10 +55,7 @@ set number relativenumber
 set ignorecase
 set visualbell
 
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 map <leader> <C-w>
 tmap <leader> <C-w>
@@ -79,5 +80,12 @@ autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,
 
 let g:prettier#config#semi = 'false'
 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = 'node_modules\|git'
+
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 

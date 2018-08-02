@@ -22,11 +22,11 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'prettier/vim-prettier'
 Plugin 'vimwiki/vimwiki'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'wikitopian/hardmode'
 Plugin 'tpope/vim-surround'
 Plugin 'luochen1990/rainbow'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,7 +75,7 @@ syntax on
 
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue Prettier
 
 let g:prettier#config#semi = 'false'
 
@@ -87,4 +87,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+let g:vim_markdown_frontmatter = 1
 

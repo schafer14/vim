@@ -27,6 +27,8 @@ Plugin 'wikitopian/hardmode'
 Plugin 'tpope/vim-surround'
 Plugin 'luochen1990/rainbow'
 Plugin 'godlygeek/tabular'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,7 +56,7 @@ set number relativenumber
 set ignorecase
 set visualbell
 
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 map <leader>w <C-w>
 tmap <leader>w <C-w>
@@ -90,3 +92,4 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 let g:vim_markdown_frontmatter = 1
 
+set incsearch

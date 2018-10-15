@@ -29,6 +29,11 @@ Plugin 'luochen1990/rainbow'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-commentary'
+Plugin 'jparise/vim-graphql'
+Plugin 'Galooshi/vim-import-js'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,8 +43,9 @@ let mapleader = ","
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsForwardTrigger="<c-j>"
 let g:UltiSnipsBackwardTrigger="<c-k>"
-let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips"
+
+nmap <leader>ue :UltiSnipsEdit<cr>
 
 imap jk <Esc>
 
@@ -93,3 +99,4 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:vim_markdown_frontmatter = 1
 
 set incsearch
+map <leader>tn :%s/import\(\_.\{-}\)from \(.*\)/const\1= require(\2)/g<CR>
